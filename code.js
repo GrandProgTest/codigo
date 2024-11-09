@@ -12,7 +12,7 @@ redisCliente.connect().catch((error) => console.error('Error de conexión:', err
 servidor.get('/worker', async (req, res) => {
   try {
     // Obtener el valor almacenado en Redis
-    const resultado = await redisCliente.get('usuario:1000');
+    const resultado = await redisCliente.get(''); //Reemplazar por valor
     if (resultado) {
       // Si existe el registro, lo enviamos como respuesta en formato JSON
       res.json(JSON.parse(resultado)); 
